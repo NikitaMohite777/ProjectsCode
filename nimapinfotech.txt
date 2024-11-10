@@ -1,0 +1,66 @@
+package seleniumpoject1;
+import java.awt.AWTException;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
+
+public class Test {
+	
+	private static CharSequence mwh;
+	WebDriver driver;
+	//@SuppressWarnings("null")
+	@SuppressWarnings("deprecation")
+	public static void main(String[] args) throws InterruptedException, AWTException {
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		ChromeDriver driver = new ChromeDriver(options);
+		driver.get("https://testffc.nimapinfotech.com/");
+                }
+            //login website
+
+             public void login(String username, String password, String captchaValue) {
+		driver.findElement(By.id("id="mat-input-0"")).sendKeys(username);
+		driver.findElement(By.id("mat-input-1")).sendKeys(password);
+                d.findElement(By.xpath("//input[@class='ng-pristine ng-valid ng-touched']");
+		d.findElement(By.xpath("//button[@id='kt_login_signin_submit']")).click();
+
+                 //Verify the Toast/Popup message after the PunchIn
+
+                 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                 driver.findElement(By.id(" Assign customer ")).click();	
+                 Set<String> wnd = driver.getWindowHandles();
+               Iterator<String> i1 = wnd.iterator();
+             String prntw = i1.next();
+                String popwnd = i1.next();
+               driver.switchTo().window(popwnd);
+             System.out.println("Page title of popup: "+ driver.getTitle());
+             driver.close();
+             driver.switchTo().window(prntw);
+              System.out.println("Page title of parent window: "+ driver.getTitle());
+                driver.quit();
+
+
+
+
+
+         //click Mycustomer
+
+                  String url11=driver.getCurrentUrl();
+                  System.out.println(url11);
+                  System.out.println(driver.getWindowHandle());
+                  System.out.println(driver.getWindowHandles());
+                 driver.findElement(By.xpath("//span[normalize-space()='My Customers']")).click();
+                 driver.findElement(By.xpath("//span[normalize-space()='New Customer']")).click();
+
+
+	 
+      }
+
